@@ -1,0 +1,152 @@
+git clone https://git.ogilvy-digital.com/scm/ogc/technolgy-experiement.git technology-experiment
+
+cd technology-experiment
+
+mkdir BuildAdditions SourceCode
+
+touch .gitignore BuildAdditions/.gitignore SourceCode/.gitignore
+
+git add -A
+
+git commit -m "created 2 empty folders BuildAdditions and SourceCode"
+
+mkdir SourceCode/SRC SourceCode/DIST
+
+touch SourceCode/SRC/.gitignore SourceCode/DIST/.gitignore
+
+git add SourceCode/SRC
+
+git commit -m "added SourceCode/SRC folder"
+
+echo ".DS_Store" >> .gitignore
+
+echo "SourceCode/DIST" >> .gitignore
+
+git add .gitignore
+
+git commit -m "added .DS_Store and SourceCode/DIST to .gitignore"
+
+git push origin master
+
+touch SourceCode/SRC/index.html
+
+mkdir SourceCode/SRC/img SourceCode/SRC/css SourceCode/SRC/js
+
+touch SourceCode/SRC/img/.gitignore SourceCode/SRC/css/.gitignore SourceCode/SRC/js/.gitignore
+
+git add SourceCode/SRC
+
+git commit -m "added basic html site structure to SourceCode/SRC"
+
+git add README_siteSetup.md 
+
+git commit -m "moved README_siteSetup.md into root"
+
+/* INSTALL GULP & PLUGINS --------------------------------------------- */
+
+npm rm --global gulp // first, remove previous versions globally
+
+npm install --global gulp-cli
+
+npm init  // creates package.json file
+
+npm install --save-dev gulp
+
+touch gulpfile.js
+
+gulp
+
+npm install gulp-clean-css --save-dev
+
+git add -A
+
+git commit -m "installed gulp and its clean plug-in"
+
+npm install --save-dev gulp-uglify
+
+git add -A
+
+git commit -m "installed gulp plugin uglify"
+
+npm install --save-dev gulp-autoprefixer
+
+git add -A
+
+git commit -m "installed gulp plugin autoprefixer"
+
+npm install gulp-sass --save-dev
+
+git add -A
+
+git commit -m "installed gulp sass"
+
+/* INSTALL GULP BOWER --------------------------------------------- */
+
+npm install --save-dev gulp gulp-bower
+
+git add -A
+
+git commit -m "installed bower"
+
+/* MUST INSTALL BOWER GLOBALLY BEFORE GULP BOWER ------------------ */
+
+cd ~
+
+npm install -g bower
+
+cd ~/technology-experiment
+
+bower init
+
+bower install --save bootstrap-sass
+
+touch SourceCode/SRC/css/app.scss
+
+/* ----------------------------------------------
+can't run gulp yet bc it needs these plugins:
+	gulp-sourcemaps 
+	convert-source-map
+	detect-newline
+	acorn 
+	pump
+
+------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

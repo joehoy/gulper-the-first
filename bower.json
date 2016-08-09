@@ -1,0 +1,20 @@
+{
+  "name": "technology-experiment",
+  "description": "Setting up a base structure for site development",
+  "main": "index.js",
+  "authors": [
+    "Joe Hoy <joe.hoy@ogilvy.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
